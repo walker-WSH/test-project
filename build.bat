@@ -13,5 +13,6 @@ cov01 --off --quiet --no-banner
 %~dp0x64\Release\test.exe
 %~dp0x64\Release\test2.exe
 covhtml --file %COVFILE% output\
+covxml --file %COVFILE% --output report.xml
 
 pause
