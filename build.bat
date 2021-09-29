@@ -1,8 +1,17 @@
-@echo off
+set COVFILE=E:\NAVER-Document\bullseye\test\wsh.cov
+echo %COVFILE%
 
-echo start building...................
+covclear -f %COVFILE%
+covselect --no-banner --quiet --file "%COVFILE%" --add %~dp0
+covselect --import BullseyeCoverageExclusions
 
-devenv test.sln /Rebuild "Release|x64"
-if not "%ERRORLEVEL%" == "0" echo building error!
+cov01 --on --quiet --no-banner
+cd /d E:\NAVER-Document\bullseye\test
+devenv test.sln /Rebuild "Debug|x64"
+cov01 --off --quiet --no-banner
 
-echo build finished...................
+.\x64\Debug\test.exe
+.\x64\Debug\test2.exe
+covhtml --file %COVFILE% output\
+
+pause
