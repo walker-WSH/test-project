@@ -10,8 +10,8 @@ cov01 --on --quiet --no-banner
 devenv test.sln /Rebuild "Release|x64"
 cov01 --off --quiet --no-banner
 
-%~dp0x64\x64\Release\test.exe
-%~dp0x64\x64\Release\test2.exe
+%~dp0x64\Release\test.exe
+%~dp0x64\Release\test2.exe
 covhtml --file %COVFILE% output\
 
 pause
