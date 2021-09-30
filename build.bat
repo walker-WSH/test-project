@@ -2,6 +2,7 @@ set COVFILE=%~dp0wsh.cov
 echo %COVFILE%
 
 covclear -f %COVFILE%
+covselect --no-banner --quiet --file "%COVFILE%" --remove %~d0
 covselect --no-banner --quiet --file "%COVFILE%" --add %~dp0
 covselect --import BullseyeCoverageExclusions
 
