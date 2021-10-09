@@ -18,9 +18,15 @@
     <ClCompile Include="test2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="class\TestCalss.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib.hpp">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="class\TestCalss.h">
       <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>

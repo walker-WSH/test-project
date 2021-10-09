@@ -1,4 +1,5 @@
 ﻿#include "lib.hpp"
+#include "class/TestCalss.h"
 
 static void test(int a)
 {
@@ -18,6 +19,13 @@ int main()
 	
 	test(1);
 	test(-99);
+
+	char str[] = "test";
+
+	TestCalss test;
+	test.f1();
+	test.f2(1);
+	test.f3(str);
 
 	return 0;
 }
