@@ -24,7 +24,7 @@ int main()
 
 	TestCalss test;
 	test.f1();
-	test.f2(1);
+	test.f2(-1);
 	test.f3(str);
 
 	return 0;
